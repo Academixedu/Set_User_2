@@ -12,8 +12,8 @@ public class TreeSets{
   s1.add(new Person("Lucky", 30, "Hyderabad"));
   s1.add(new Person("Lucky", 30, "Hyderabad"));
   s1.add(new Person("kiran", 27, "Rajamaundry"));
- for(Person person:s1){
-  System.out.println(person);
+ for(Person p1:s1){
+  System.out.println(p1);
   }
   // Make the Sorting Order Based on Comparator
 }
