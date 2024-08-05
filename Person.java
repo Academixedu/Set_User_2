@@ -1,4 +1,4 @@
-public class Person{
+public class Person implements Comparable<Person> {
 // prepare a Person class here and  implmenet Getters and Setters,constructor,tostring,Comparable
 public Person(int i, String string, int j, String string2) {
     
@@ -118,6 +118,12 @@ public String getPersonname() {
 public String getPersonid() {
     // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'getPersonid'");
+}
+
+@Override
+public int compareTo(Person o) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'compareTo'");
 }
 
 }
