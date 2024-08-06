@@ -1,75 +1,44 @@
-public class Person implements Comparable<Person> {
-// prepare a Person class here and  implmenet Getters and Setters,constructor,tostring,Comparable
-public Person(int i, String string, int j, String string2) {
+public class Person{
     
-}
-
-public static final int pid = 0;
-public Object personname;
-public double personsal;
-public Object persondesg;
-
-public class person implements Comparable<Person>{
-    private int personid;
-    private String personname;
-    private double personsal;
-    private String persondesg;
-  
-    @Override
-    public int compareTo(Person o) {
-         return 0;
+    public String personname;
+    public Double personsal;
+    public String persondeg;
+    public Person(String personname, Double personsal, String persondeg) {
+        this.personname = personname;
+        this.personsal = personsal;
+        this.persondeg = persondeg;
     }
-
-    public int getPersonid() {
-        return personid;
-    }
-
-    public void setPersonid(int personid) {
-        this.personid = pid;
-    }
-
     public String getPersonname() {
         return personname;
     }
-
     public void setPersonname(String personname) {
         this.personname = personname;
     }
-
-    public double getPersonsal() {
+    public Double getPersonsal() {
         return personsal;
     }
-
-    public void setPersonsal(double personsal) {
+    public void setPersonsal(Double personsal) {
         this.personsal = personsal;
     }
-
-    public String getPersondesg() {
-        return persondesg;
+    public String getPersondeg() {
+        return persondeg;
     }
-
-    public void setPersondesg(String persondesg) {
-        this.persondesg = persondesg;
+    public void setPersondeg(String persondeg) {
+        this.persondeg = persondeg;
     }
-
     @Override
     public String toString() {
-        return "Person [personid=" + personid + ", personname=" + personname + ", personsal=" + personsal + ", persondesg=" + persondesg + "]";
+        return "Person [personname=" + personname + ", personsal=" + personsal + ", persondeg=" + persondeg + "]";
     }
-
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + personid;
         result = prime * result + ((personname == null) ? 0 : personname.hashCode());
-        long temp;
-        temp = Double.doubleToLongBits(personsal);
-        result = prime * result + (int) (temp ^ (temp >>> 32));
-        result = prime * result + ((persondesg == null) ? 0 : persondesg.hashCode());
+        result = prime * result + ((personsal == null) ? 0 : personsal.hashCode());
+        result = prime * result + ((persondeg == null) ? 0 : persondeg.hashCode());
         return result;
     }
-
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -79,57 +48,22 @@ public class person implements Comparable<Person>{
         if (getClass() != obj.getClass())
             return false;
         Person other = (Person) obj;
-        if (pid != other.pid)
-            return false;
         if (personname == null) {
             if (other.personname != null)
                 return false;
         } else if (!personname.equals(other.personname))
             return false;
-        if (Double.doubleToLongBits(personsal) != Double.doubleToLongBits(other.personsal))
-            return false;
-        if (persondesg == null) {
-            if (other.persondesg != null)
+        if (personsal == null) {
+            if (other.personsal != null)
                 return false;
-        } else if (!persondesg.equals(other.persondesg))
+        } else if (!personsal.equals(other.personsal))
+            return false;
+        if (persondeg == null) {
+            if (other.persondeg != null)
+                return false;
+        } else if (!persondeg.equals(other.persondeg))
             return false;
         return true;
     }
-
-    public person(int pid, String pname, double psal, String pdesg) {
-        this.personid = pid;
-        this.personname = pname;
-        this.personsal = psal;
-        this.persondesg = pdesg;
-    }
-
-    public person() {
     }
     
-    
-    
-}
-
-public String getPersonname() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'getPersonname'");
-}
-
-public String getPersonid() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'getPersonid'");
-}
-
-@Override
-public int compareTo(Person o) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'compareTo'");
-}
-
-}
-
-    
-
-    
-
-
