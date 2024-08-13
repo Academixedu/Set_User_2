@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.TreeSet;
 
 public class TreeSets{
@@ -8,8 +9,8 @@ public class TreeSets{
     p.add(new Person("PSVSAI", 20, "ASSOCIATE", 18000));
     p.add(new Person("MAHESH", 24, "HR", 35000));
     p.add(new Person("VENKATA", 23, "TL", 25550));
-    for (Person per : p) {
-      System.out.println(per);
+    Iterator<Person> iterator =  p.iterator();
+    while(iterator.hasNext()){
+      System.out.println(iterator.next());
     }
-  }
-}
+}}
