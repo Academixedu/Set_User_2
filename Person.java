@@ -1,15 +1,61 @@
+public class Person{
+public class Person implements Comparable<Person>{
+// prepare a Person class here and  implmenet Getters and Setters,constructor,tostring,Comparable
+private String name;
+private int age;
+private int sal;
+private String desg;
 
-public class BasedOnName{
+public Person(String name, int age, int sal, String desg) {
+    this.name = name;
+    this.age = age;
+    this.sal = sal;
+    this.desg = desg;
+}
 
-  // implements comparator here and make person class as Target <>
-// Prepare a Code for Sorting Order BasedOnName 
-import java.util.Comparator;
+public String getName() {
+    return name;
+}
 
-public class BasedOnName implements Comparator<Person> {
+public void setName(String name) {
+    this.name = name;
+}
 
-    @Override
-    public int compare(Person p1, Person p2) {
-        return p1.getName().compareTo(p2.getName());
-    }
+public int getAge() {
+    return age;
+}
+
+public void setAge(int age) {
+    this.age = age;
+}
+
+public int getSal() {
+    return sal;
+}
+
+public void setSal(int sal) {
+    this.sal = sal;
+}
+
+public String getDesg() {
+    return desg;
+}
+
+public void setDesg(String desg) {
+    this.desg = desg;
+}
+
+@Override
+public String toString() {
+    return "Person [name=" + name + ", age=" + age + ", sal=" + sal + ", desg=" + desg + "]";
+}
+
+
+
+@Override
+public int compareTo(Person p) {
+    return 0; // Default comparison by name
+
+}
 
 }
