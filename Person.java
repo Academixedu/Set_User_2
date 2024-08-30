@@ -28,5 +28,4 @@ public String toString() {
 public int compareTo(Person o) {
 return Integer.compare(this.age, o.age);
 }
-
 }
