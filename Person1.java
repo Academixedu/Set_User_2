@@ -1,4 +1,6 @@
-public class Person implements Comparable<Person>{
+
+import java.util.Comparator;
+public class Person1 implements Comparator<Person1> {
     private int pid;
     private String pname;
     private char gen;
@@ -27,7 +29,7 @@ public class Person implements Comparable<Person>{
     public void setSal(double sal) {
         this.sal = sal;
     }
-    public Person(int pid, String pname, char gen, double sal) {
+     public Person1(int pid, String pname, char gen, double sal) {
         this.pid = pid;
         this.pname = pname;
         this.gen = gen;
@@ -38,7 +40,7 @@ public class Person implements Comparable<Person>{
         return "Person [pid=" + pid + ", pname=" + pname + ", gen=" + gen + ", sal=" + sal + "]";
     }
     @Override
-    public int compareTo(Person o) {
-        return Integer.compare(this.pid, o.pid);
+    public int compare(Person1 o1, Person1 o2) {
+        return o1.getPname().compareTo(o2.getPname());
     }
 }
