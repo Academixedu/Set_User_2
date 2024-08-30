@@ -9,6 +9,6 @@ d.add(new Person(30, "dinesh"));
 d.add(new Person(20, "nand kishor"));
 for (Person person : d) {
   System.out.println(person);
-}
+ }
 }
 }
